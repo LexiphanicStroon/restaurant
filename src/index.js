@@ -1,13 +1,14 @@
 import createPage from "./createPage";
+const contentDiv = document.querySelector('#content');
 
 function component() {
-    const content = document.querySelector('#content');
     const element = document.createElement('div');
-
-    element.innerHTML = 'Hello world';
-    content.appendChild(element);
-    return content;
-
+    element.innerHTML = 'Hello world';    
+    
+    return element;
 }
+let createdPage = createPage();
+contentDiv.appendChild(createdPage);
 
-document.body.appendChild(component());
+let navLinks = document.querySelector('.nav-links');
+console.log(navLinks);
