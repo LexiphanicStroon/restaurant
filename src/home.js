@@ -1,7 +1,7 @@
 export default function home() {
-    const home = document.createElement('div');
-    home.textContent = "Hello, I'm home";
-
-    return home;
+    const div = document.createElement('div');
+    div.textContent = "Hello, I'm home";
+    console.log(div); 
+    return div;
 
 }

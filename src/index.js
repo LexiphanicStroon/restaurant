@@ -1,3 +1,5 @@
+import home from "./home";
+
 const content = document.querySelector("#content");
 
 const main = document.querySelector("#content");
@@ -19,10 +21,12 @@ document.body.appendChild(topNav);
 const navLinks = document.querySelectorAll("p");
 console.log(navLinks);
 
-function renderPage(content) {
-    
-}
 
 navLinks.forEach((p) => {
-    p.addEventListener("click", () => {console.log('click worked');});
+    p.addEventListener("click", renderPage);
 });
+
+function renderPage() {
+    content.innerHTML = '';
+    content.appendChild(home());
+}
